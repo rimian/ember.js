@@ -613,7 +613,7 @@ class Route extends EmberObject implements IRoute {
 
     Optionally supply a model for the route in question. The model
     will be serialized into the URL using the `serialize` hook of
-    the route:
+    the route:der
 
     ```javascript
     this.transitionTo('blogPost', aPost);
@@ -1515,7 +1515,7 @@ class Route extends EmberObject implements IRoute {
         this.render('photos', {
           into: 'application',
           outlet: 'anOutletName'
-        })
+        });
       }
     });
     ```
@@ -1533,7 +1533,7 @@ class Route extends EmberObject implements IRoute {
           outlet: 'anOutletName', // the outlet inside `options.into` to render into.
           controller: 'someControllerName', // the controller to use for this template, referenced by name
           model: model            // the model to set on `options.controller`.
-        })
+        });
       }
     });
     ```
@@ -1581,7 +1581,7 @@ class Route extends EmberObject implements IRoute {
       into: 'application', // the parent route to 'post' Route
       outlet: 'main',      // {{outlet}} and {{outlet 'main'}} are synonymous,
       controller: 'post',  // the controller associated with the 'post' Route
-    })
+    });
     ```
 
     By default the controller's `model` will be the route's model, so it does not
